@@ -324,6 +324,17 @@
 
 &sata { /* SATA */
 	pinctrl-names = "default";
+	clock-names = "sata", "sata_ref", "epcs_tx", "epcs_rx",
+			"per_clk0", "per_clk1", "per_clk2",
+			"per_clk3", "per_clk4", "per_clk5",
+			"phy_pclk0", "phy_pclk1", "phy_apbclk", "ahb";
+	power-domains = <&pd IMX_SC_R_SATA_0>,
+			<&pd IMX_SC_R_PCIE_A>,
+			<&pd IMX_SC_R_PCIE_B>,
+			<&pd IMX_SC_R_SERDES_0>,
+			<&pd IMX_SC_R_SERDES_1>,
+			<&pd IMX_SC_R_HSIO_GPIO>,
+			<&pd IMX_SC_R_SATA_0>;
 	pinctrl-0 = <&pinctrl_sata>;
 	sata-act-gpios = <&lsio_gpio1 18 GPIO_ACTIVE_LOW>;
 	fsl,phy-imp = <0x6c>;
