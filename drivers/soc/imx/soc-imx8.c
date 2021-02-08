@@ -176,7 +176,7 @@ static const struct of_device_id imx8_soc_match[] = {
 /* IWG27M: SOM Revision and BSP info */
 #ifdef CONFIG_IWG27M
 
-#define        BSP_VERSION             "iW-PRFHZ-SC-01-R4.0-REL1.0a-Linux5.4.24"
+#define        BSP_VERSION             "iW-PRFHZ-SC-01-R4.0-REL0.2-Linux5.4.24"
 
 static int __init som_revision(void)
 {
